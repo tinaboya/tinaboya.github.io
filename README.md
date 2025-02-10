@@ -16,13 +16,13 @@ My research interests are in applied NLP, biomedical NLP, and developing NLP met
 
 ### Research (Co-Author Publications)
 
-- [Analysis of eligibility criteria clusters based on large language models for clinical trial design](https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocae311/7933305)(Journal of the American Medical Informatics Association, 2024)
+- [Analysis of eligibility criteria clusters based on large language models for clinical trial design](https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocae311/7933305) (Journal of the American Medical Informatics Association, 2024)
 
-- [A Dataset for Evaluating Contextualized Representation of Biomedical Concepts in Language Models](https://www.nature.com/articles/s41597-024-03317-w)(Nature Scientific Data, 2024)
+- [A Dataset for Evaluating Contextualized Representation of Biomedical Concepts in Language Models](https://www.nature.com/articles/s41597-024-03317-w) (Nature Scientific Data, 2024)
 
-- [The Choice of Textual Knowledge Base in Automated Claim Checking](https://dl.acm.org/doi/full/10.1145/3561389)(ACM Journal of Data and Information Quality, 2023)
+- [The Choice of Textual Knowledge Base in Automated Claim Checking](https://dl.acm.org/doi/full/10.1145/3561389) (ACM Journal of Data and Information Quality, 2023)
 
-- [Cluster Analysis of Low-Dimensional Medical Concept Representations from Electronic Health Records](https://link.springer.com/chapter/10.1007/978-3-031-20627-6_29)(The 11th International Conference on Health Information Science, 2022)
+- [Cluster Analysis of Low-Dimensional Medical Concept Representations from Electronic Health Records](https://link.springer.com/chapter/10.1007/978-3-031-20627-6_29) (The 11th International Conference on Health Information Science, 2022)
 
 ### Involved in the following events
 
