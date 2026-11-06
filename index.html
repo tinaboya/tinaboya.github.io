@@ -86,8 +86,7 @@
   }
   .switch span, .switch a { padding: 8px 18px; }
   .switch .on { background: var(--accent); color: var(--bg); }
-  .switch a { color: var(--accent); }
-  .switch a:hover { background: var(--accent-soft); text-decoration: none; }
+  .switch .off { color: var(--muted); opacity: .55; cursor: not-allowed; }
   nav { margin-top: 28px; font-size: 14px; border-top: 1px solid var(--rule); padding-top: 18px; }
   nav a { display: block; color: var(--muted); padding: 3px 0; }
   nav a:hover { color: var(--accent); text-decoration: none; }
@@ -159,7 +158,7 @@
     </div>
     <div class="switch" role="navigation" aria-label="Site version">
       <span class="on" aria-current="page">Academia</span>
-      <a href="industry.html">Industry</a>
+      <span class="off" aria-disabled="true" title="Coming soon">Industry</span>
     </div>
     <nav>
       <a href="#about">About</a>
