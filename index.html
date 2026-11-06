@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boya Zhang</title>
+<meta name="description" content="Boya Zhang: trustworthy machine learning for high-stakes decision making, with healthcare as the main application area.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6370;
+    --accent: #123456;
+    --accent-soft: #e8eef5;
+    --rule: #e3e0d8;
+    --grid: rgba(18,52,86,.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #13161b;
+      --surface: #1b1f26;
+      --text: #e6e8eb;
+      --muted: #9aa3ae;
+      --accent: #8fb6e0;
+      --accent-soft: #1f2a37;
+      --rule: #2a2f37;
+      --grid: rgba(143,182,224,.06);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    /* squared-notebook paper: faint grid lines every 24px */
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 24px 24px;
+    color: var(--text);
+    font: 18px/1.6 "Crimson Pro", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 56px 24px 72px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 56px;
+  }
+  /* ---------- sidebar ---------- */
+  aside { position: sticky; top: 40px; align-self: start; }
+  .photo {
+    width: 168px; height: 168px; border-radius: 50%;
+    object-fit: cover; display: block; margin-bottom: 20px;
+    border: 3px solid var(--surface);
+    box-shadow: 0 2px 14px rgba(0,0,0,.08);
+  }
+  h1 {
+    font-family: "Crimson Pro", Georgia, serif;
+    font-weight: 600; font-size: 30px; line-height: 1.2;
+    margin: 0 0 6px;
+  }
+  .role { color: var(--muted); font-size: 15px; margin: 0 0 22px; }
+  .aff { font-size: 15px; }
+  .email { font-size: 15px; color: var(--muted); margin: 0 0 14px; }
+  .icons { display: flex; gap: 4px; margin: 0 0 22px; }
+  .icons a {
+    width: 40px; height: 40px; border-radius: 50%; display: inline-flex;
+    align-items: center; justify-content: center; font-size: 19px;
+    color: var(--accent); transition: transform .15s, background .15s;
+  }
+  .icons a:hover { background: var(--accent-soft); transform: scale(1.12); text-decoration: none; }
+  .switch {
+    display: inline-flex; border: 1px solid var(--accent); border-radius: 999px;
+    overflow: hidden; font-size: 14px; font-weight: 600; background: var(--surface);
+  }
+  .switch span, .switch a { padding: 8px 18px; }
+  .switch .on { background: var(--accent); color: var(--bg); }
+  .switch a { color: var(--accent); }
+  .switch a:hover { background: var(--accent-soft); text-decoration: none; }
+  nav { margin-top: 28px; font-size: 14px; border-top: 1px solid var(--rule); padding-top: 18px; }
+  nav a { display: block; color: var(--muted); padding: 3px 0; }
+  nav a:hover { color: var(--accent); text-decoration: none; }
+  /* ---------- main ---------- */
+  main { min-width: 0; overflow-wrap: break-word; }
+  main section { margin-bottom: 52px; scroll-margin-top: 32px; }
+  h2 {
+    font-family: "Crimson Pro", Georgia, serif;
+    font-weight: 600; font-size: 22px; margin: 0 0 16px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+  }
+  h3 { font-size: 15px; font-weight: 600; margin: 26px 0 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  p { margin: 0 0 14px; }
+  .news { list-style: none; padding: 0; margin: 0; }
+  .news li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px dashed var(--rule); }
+  .news li:last-child { border-bottom: 0; }
+  .news .date { font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .interests { list-style: none; padding: 0; margin: 0; }
+  .interests li { padding: 10px 0; border-bottom: 1px dashed var(--rule); }
+  .interests li:last-child { border-bottom: 0; }
+  .interests strong { color: var(--accent); }
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 12px; padding: 18px 20px;
+  }
+  .tag {
+    display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .05em;
+    text-transform: uppercase; color: var(--accent);
+    background: var(--accent-soft); padding: 2px 10px; border-radius: 999px; margin-bottom: 8px;
+  }
+  .card h4 { margin: 0 0 6px; font-size: 16px; }
+  .card p { margin: 0 0 8px; font-size: 14.5px; color: var(--muted); }
+  .card .venue { font-size: 13.5px; font-weight: 500; }
+  .pubs { list-style: none; padding: 0; margin: 0; }
+  .pubs li { padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  .pubs li:last-child { border-bottom: 0; }
+  .pubs .title { font-weight: 500; }
+  .pubs .meta { display: block; color: var(--muted); font-size: 14px; }
+  .pubs .venue { font-style: italic; }
+  .activities { padding-left: 18px; margin: 0; }
+  .activities li { margin: 8px 0; }
+  footer { grid-column: 1 / -1; color: var(--muted); font-size: 13px; border-top: 1px solid var(--rule); padding-top: 18px; }
+  @media (max-width: 820px) {
+    .wrap { grid-template-columns: 1fr; gap: 36px; padding: 32px 16px 56px; }
+    aside { position: static; text-align: center; }
+    .photo { margin: 0 auto 18px; width: 140px; height: 140px; }
+    .icons { justify-content: center; }
+    nav { display: none; }
+    .cards { grid-template-columns: 1fr; }
+    .news li { grid-template-columns: 78px 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <aside>
+    <img class="photo" src="assets/img/boyazh_picture.jpg" alt="Portrait of Boya Zhang">
+    <h1>Boya Zhang</h1>
+    <p class="role">PhD in AI for Healthcare<br><span class="aff">Université de Genève · formerly MIT LCP</span></p>
+    <p class="email">boya.zhang3 (at) gmail.com</p>
+    <div class="icons">
+      <a href="assets/cv/Boya_Zhang_CV.pdf" title="CV" aria-label="CV"><i class="ai ai-cv"></i></a>
+      <a href="https://orcid.org/0000-0002-4439-8212" title="ORCID" aria-label="ORCID"><i class="ai ai-orcid"></i></a>
+      <a href="https://github.com/tinaboya" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://huggingface.co/tinaboya" title="Hugging Face" aria-label="Hugging Face">🤗</a>
+      <a href="https://www.linkedin.com/in/tinaboya" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="switch" role="navigation" aria-label="Site version">
+      <span class="on" aria-current="page">Academia</span>
+      <a href="industry.html">Industry</a>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#interests">Research interests</a>
+      <a href="#highlights">Research highlights</a>
+      <a href="#publications">Publications</a>
+      <a href="#activities">Teaching, community &amp; industry</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>I work on trustworthy machine learning for high-stakes decision making, with healthcare as my main application area. I defended my PhD in Life Sciences (AI for Healthcare) at the <a href="https://www.unige.ch/medecine/radio/en/research-groups/1035teodoro">Université de Genève</a> in September 2026, in the <a href="https://ds4dh.unige.ch/">Data Science for Digital Health</a> group of Prof. Douglas Teodoro. From November 2025 to April 2026 I was a visiting researcher at MIT's <a href="https://lcp.mit.edu/">Laboratory for Computational Physiology</a> with Prof. Leo A. Celi.</p>
+      <p>Before my PhD, I obtained an MSc in Electrical Engineering (ir., with Distinction) from Vrije Universiteit Brussel / Université libre de Bruxelles in 2021 and a BEng in Information Engineering from <a href="https://en.nwpu.edu.cn/">Northwestern Polytechnical University</a> in 2019, and I was a research intern at the <a href="https://lawecon.ethz.ch/">Center for Law &amp; Economics, ETH Zurich</a> in 2021.</p>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><span class="date">Oct 2026</span><span>Our survey on <a href="https://doi.org/10.1007/s10462-026-11743-y">retrieval-augmented generation in biomedicine</a> is published in <em>Artificial Intelligence Review</em>.</span></li>
+        <li><span class="date">Oct 2026</span><span>Two papers in the EMNLP 2026 proceedings: <a href="https://aclanthology.org/2026.mrl-1.51/">PAINT</a> at the MRL workshop and <a href="https://aclanthology.org/2026.emnlp-main.2379/">SeMLI-RAG</a> at the main conference.</span></li>
+        <li><span class="date">Sep 2026</span><span>Defended my PhD at the Université de Genève on 2 September.</span></li>
+        <li><span class="date">Sep 2026</span><span><a href="https://doi.org/10.1038/s41746-026-03224-x">Knowledge-enhanced LLMs for multilingual concept normalization</a> published in <em>npj Digital Medicine</em>.</span></li>
+        <li><span class="date">May 2026</span><span>Panelist at <a href="https://criticaldata.mit.edu/events/san-francisco-2026">AI as a Catalyst</a> with Stanford and Threshold Ventures.</span></li>
+        <li><span class="date">Apr 2026</span><span>Hosted the first <a href="https://sites.mit.edu/mit-ai-comedy-night/">MIT AI Comedy Night</a>: humans against AI on humor.</span></li>
+        <li><span class="date">Nov 2025</span><span>Started a research stay at MIT's <a href="https://lcp.mit.edu/">Laboratory for Computational Physiology</a>.</span></li>
+      </ul>
+    </section>
+
+    <section id="interests">
+      <h2>Research interests</h2>
+      <p>Trustworthy machine learning for high-stakes decision making:</p>
+      <ul class="interests">
+        <li><strong>Transparent human–AI interaction</strong>: reliable evidence-based decision support systems.</li>
+        <li><strong>Robustness</strong>: failure-mode analysis of models deployed in real-world settings.</li>
+        <li><strong>Fairness</strong>: how model behaviour differs across languages and cultures.</li>
+      </ul>
+    </section>
+
+    <section id="highlights">
+      <h2>Research highlights</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="tag">Retrieval</span>
+          <h4>Quality-aware health search</h4>
+          <p>A ranking framework based on discriminative models that automatically detects usefulness, supportiveness and credibility signals across a billion web pages, improving health search results for lay users.</p>
+          <a class="venue" href="https://doi.org/10.2196/42630">JMIR AI 2024</a>
+        </div>
+        <div class="card">
+          <span class="tag">Verification</span>
+          <h4>CliniFact</h4>
+          <p>A benchmark for clinical claim verification, where small discriminative models outperformed large generative models at clinical natural language inference.</p>
+          <a class="venue" href="https://doi.org/10.1038/s41597-025-04417-x">Scientific Data 2025</a>
+        </div>
+        <div class="card">
+          <span class="tag">Generation</span>
+          <h4>HealthContradict</h4>
+          <p>A benchmark for biomedical retrieval-augmented generation, showing that in-domain fine-tuning helps models identify the correct context.</p>
+          <a class="venue" href="https://doi.org/10.1038/s41746-025-02336-0">npj Digital Medicine 2026</a>
+        </div>
+        <div class="card">
+          <span class="tag">Fairness</span>
+          <h4>PAINT</h4>
+          <p>Led a 17-author study across 16 institutions on disparities in how pain is described in medical text across four languages.</p>
+          <a class="venue" href="https://aclanthology.org/2026.mrl-1.51/">MRL @ EMNLP 2026</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <h3>First author</h3>
+      <ul class="pubs">
+        <li><a class="title" href="https://doi.org/10.1038/s41746-025-02336-0">HealthContradict: evaluating biomedical knowledge conflicts in language models</a><span class="meta">with A. Bornet, R. Yang, N. Liu, D. Teodoro · <span class="venue">npj Digital Medicine</span>, 2026</span></li>
+        <li><a class="title" href="https://aclanthology.org/2026.mrl-1.51/">PAINT: a framework for multilingual pain representation from medical licensing exams to real-world clinical texts</a><span class="meta">with Y. Ma, J. Wu et al., L. A. Celi, D. Teodoro · <span class="venue">6th Workshop on Multilingual Representation Learning at EMNLP</span>, 2026</span></li>
+        <li><a class="title" href="https://doi.org/10.1038/s41597-025-04417-x">A dataset for evaluating clinical research claims in large language models</a><span class="meta">with A. Bornet, A. Yazdani, P. Khlebnikov, M. Milutinovic, H. Rouhizadeh, P. Amini, D. Teodoro · <span class="venue">Scientific Data</span>, 2025</span></li>
+        <li><a class="title" href="https://doi.org/10.2196/42630">Online health search via multidimensional information quality assessment based on deep language models</a><span class="meta">with N. Naderi, R. Mishra, D. Teodoro · <span class="venue">JMIR AI</span>, 2024</span></li>
+        <li><a class="title" href="https://aclanthology.org/2023.clinicalnlp-1.57/">DS4DH at MEDIQA-Chat 2023: leveraging SVM and GPT-3 prompt engineering for medical dialogue classification and summarization</a><span class="meta">with R. Mishra, D. Teodoro · <span class="venue">5th Clinical NLP Workshop</span>, 2023</span></li>
+        <li><a class="title" href="https://trec.nist.gov/pubs/trec30/papers/DigiLab-HM.pdf">DS4DH at TREC Health Misinformation 2021: multi-dimensional ranking models with transfer learning and rank fusion</a><span class="meta">with N. Naderi, F. Jaume-Santero, D. Teodoro · <span class="venue">TREC</span>, 2022</span></li>
+      </ul>
+      <h3>Co-author</h3>
+      <ul class="pubs">
+        <li><a class="title" href="https://doi.org/10.1007/s10462-026-11743-y">Retrieval-augmented generation in biomedicine: a survey of technologies, datasets, and clinical applications</a><span class="meta"><span class="venue">Artificial Intelligence Review</span>, 2026</span></li>
+        <li><a class="title" href="https://aclanthology.org/2026.emnlp-main.2379/">SeMLI-RAG: semantics-guided multimodal late interaction for retrieval-augmented radiology report generation</a><span class="meta"><span class="venue">EMNLP</span>, 2026</span></li>
+        <li><a class="title" href="https://doi.org/10.1038/s41746-026-03224-x">Knowledge-enhanced LLMs for multilingual biomedical concept normalization: a multilingual benchmarking and behavioral analysis</a><span class="meta"><span class="venue">npj Digital Medicine</span>, 2026</span></li>
+        <li><a class="title" href="https://doi.org/10.1093/jamia/ocag136">The consensus-based CINEX guideline for reporting clinical information extraction studies</a><span class="meta"><span class="venue">Journal of the American Medical Informatics Association</span>, 2026</span></li>
+        <li><a class="title" href="https://doi.org/10.1038/s41746-025-01886-7">A scoping review of artificial intelligence applications in clinical trial risk assessment</a><span class="meta"><span class="venue">npj Digital Medicine</span>, 2025</span></li>
+        <li><a class="title" href="https://doi.org/10.1038/s41597-025-04718-1">An evaluation benchmark for adverse drug event prediction from clinical trial results</a><span class="meta"><span class="venue">Scientific Data</span>, 2025</span></li>
+        <li><a class="title" href="https://doi.org/10.1093/jamia/ocae311">Analysis of eligibility criteria clusters based on large language models for clinical trial design</a><span class="meta"><span class="venue">Journal of the American Medical Informatics Association</span>, 2025</span></li>
+        <li><a class="title" href="https://ebooks.iospress.nl/doi/10.3233/SHTI250467">Exploring zero-shot cross-lingual biomedical concept normalization via large language models</a><span class="meta"><span class="venue">Intelligent Health Systems, IOS Press</span>, 2025</span></li>
+        <li><a class="title" href="https://doi.org/10.1038/s41597-024-03317-w">A dataset for evaluating contextualized representation of biomedical concepts in language models</a><span class="meta"><span class="venue">Scientific Data</span>, 2024</span></li>
+        <li><a class="title" href="https://doi.org/10.1145/3561389">The choice of textual knowledge base in automated claim checking</a><span class="meta"><span class="venue">ACM Journal of Data and Information Quality</span>, 2023</span></li>
+        <li><a class="title" href="https://doi.org/10.1007/978-3-031-20627-6_29">Cluster analysis of low-dimensional medical concept representations from electronic health records</a><span class="meta"><span class="venue">International Conference on Health Information Science</span>, 2022</span></li>
+      </ul>
+    </section>
+
+    <section id="activities">
+      <h2>Teaching, community &amp; industry</h2>
+      <ul class="activities">
+        <li>Teaching assistant for <a href="https://moodle.unige.ch/course/info.php?id=18866">Applied Machine Learning in Healthcare: ChatGPT and beyond</a>, Université de Genève: lectures, slides, exercises and student projects.</li>
+        <li>Industry and public-sector collaboration with TriNetX (formerly Clinerion), RisKlick and public health partners on the <a href="https://www.aramis.admin.ch/Grunddaten/?ProjectID=49720">NLU4EHR</a>, <a href="https://www.aramis.admin.ch/Grunddaten/?ProjectID=50843">CTxAI</a> and <a href="https://www.interreg-francesuisse.eu/les-projets-aides/gesica">GESICA</a> projects.</li>
+        <li>Datathon mentor at <a href="https://criticaldata.mit.edu/">MIT Critical Data</a> events with Mayo Clinic (Recognition Award, 2026), Harvard Medical School, Brown University and Bowdoin College.</li>
+        <li>Workshop facilitator and panelist at <a href="https://criticaldata.mit.edu/events/san-francisco-2026">AI as a Catalyst</a> (MIT Critical Data, American Medical Association, Stanford, Threshold Ventures), 2026.</li>
+        <li>Founder and host of the <a href="https://sites.mit.edu/mit-ai-comedy-night/">MIT AI Comedy Night</a>, a live benchmark of humans against AI on humor, supported by the De Florez Fund for Humor, 2026.</li>
+        <li>Second place at the <a href="https://republic-of-innovation.ch/le-premier-gate-challenge-a-shanghai-met-a-lhonneur-trois-startups-innovantes/">first GATE Challenge</a>, Shanghai, 2025, with Better Buddy (i-Teams, Université de Genève).</li>
+        <li>Best Poster, Women in Data Science Conference Zürich, 2025.</li>
+        <li>Lightning talks at <a href="https://cuso-ah25.human-ist.ch/">CUSO Winter School 2025: Human-AI Collaboration</a>, SciMed PhD Conference 2023 and TREC 2021.</li>
+        <li>Reviewer for EMNLP 2026, ClinicalNLP @ ACL, npj Digital Medicine, Communications Medicine, Scientific Reports, JAMIA Open and BMC journals.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>Last updated November 2026.</footer>
+</div>
+</body>
+</html>
