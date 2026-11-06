@@ -146,8 +146,8 @@
     <img class="photo" src="assets/img/boyazh_picture.jpg" alt="Portrait of Boya Zhang">
     <h1>Boya Zhang</h1>
     <p class="role">PhD in AI for Healthcare, Université de Genève<br>Research Affiliate, MIT</p>
-    <p class="email">boya_zh (at) mit.edu</p>
     <div class="icons">
+      <a class="mail" href="#" data-u="boya_zh" data-d="mit.edu" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
       <a href="assets/cv/Boya_Zhang_CV.pdf" title="CV" aria-label="CV"><i class="ai ai-cv"></i></a>
       <a href="https://orcid.org/0000-0002-4439-8212" title="ORCID" aria-label="ORCID"><i class="ai ai-orcid"></i></a>
       <a href="https://github.com/tinaboya" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -272,5 +272,11 @@
 
   <footer>Last updated November 2026.</footer>
 </div>
+<script>
+  // the address is assembled here so that it is not readable by simple scrapers
+  document.querySelectorAll('a.mail').forEach(function (a) {
+    a.href = 'mailto:' + a.dataset.u + '@' + a.dataset.d;
+  });
+</script>
 </body>
 </html>
