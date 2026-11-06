@@ -54,8 +54,8 @@
     margin: 0 auto;
     padding: 56px 24px 72px;
     display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 56px;
+    grid-template-columns: 310px 1fr;
+    gap: 44px;
   }
   /* ---------- sidebar ---------- */
   aside { position: sticky; top: 40px; align-self: start; }
@@ -83,8 +83,8 @@
   .switch { font-size: 15px; }
   .switch .on { font-weight: 600; color: var(--accent); }
   .switch .sep { color: var(--muted); margin: 0 8px; }
-  .switch .off { color: var(--muted); opacity: .6; cursor: default; }
-  .switch .soon { font-size: 13px; }
+  .switch a { color: var(--muted); }
+  .switch a:hover { color: var(--accent); }
   nav { margin-top: 28px; font-size: 14px; border-top: 1px solid var(--rule); padding-top: 18px; }
   nav a { display: block; color: var(--muted); padding: 3px 0; }
   nav a:hover { color: var(--accent); text-decoration: none; }
@@ -145,7 +145,7 @@
   <aside>
     <img class="photo" src="assets/img/boyazh_picture.jpg" alt="Portrait of Boya Zhang">
     <h1>Boya Zhang</h1>
-    <p class="role">PhD in AI for Healthcare<br><span class="aff">Université de Genève · formerly MIT LCP</span></p>
+    <p class="role">PhD in AI for Healthcare, Université de Genève<br>Visiting Researcher, MIT (2025–26)</p>
     <p class="email">boya.zhang3 (at) gmail.com</p>
     <div class="icons">
       <a href="assets/cv/Boya_Zhang_CV.pdf" title="CV" aria-label="CV"><i class="ai ai-cv"></i></a>
@@ -155,7 +155,7 @@
       <a href="https://www.linkedin.com/in/tinaboya" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
     <div class="switch" role="navigation" aria-label="Site version">
-      <span class="on" aria-current="page">Academia</span><span class="sep">/</span><span class="off" aria-disabled="true">Industry <em class="soon">(coming soon…)</em></span>
+      <span class="on" aria-current="page">Academia</span><span class="sep">/</span><a href="industry.html">Industry</a>
     </div>
     <nav>
       <a href="#about">About</a>
