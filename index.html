@@ -100,11 +100,13 @@
     font-weight: 600; font-size: 22px; margin: 0 0 16px;
     padding-bottom: 8px; border-bottom: 1px solid var(--rule);
   }
+  h2 i { color: var(--accent); font-size: 16px; width: 22px; margin-right: 8px; text-align: center; }
   h3 { font-size: 15px; font-weight: 600; margin: 26px 0 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
   p { margin: 0 0 14px; }
   .news { list-style: none; padding: 0; margin: 0; }
   .news li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px dashed var(--rule); }
   .news li:last-child { border-bottom: 0; }
+  .news .emo { margin-right: 8px; }
   .news .date { font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
   .interests { list-style: none; padding: 0; margin: 0; }
   .interests li { padding: 10px 0; border-bottom: 1px dashed var(--rule); }
@@ -173,26 +175,26 @@
 
   <main>
     <section id="about">
-      <h2>About</h2>
-      <p>I work on trustworthy machine learning for high-stakes decision making, with healthcare as my main application area. I defended my PhD in Life Sciences (AI for Healthcare) at the <a href="https://www.unige.ch/medecine/radio/en/research-groups/1035teodoro">Université de Genève</a> in September 2026, in the <a href="https://ds4dh.unige.ch/">Data Science for Digital Health</a> group of Prof. Douglas Teodoro. From November 2025 to April 2026 I was a visiting researcher at MIT's <a href="https://lcp.mit.edu/">Laboratory for Computational Physiology</a> with Prof. Leo A. Celi.</p>
-      <p>Before my PhD, I obtained an MSc in Electrical Engineering (ir., with Distinction) from Vrije Universiteit Brussel / Université libre de Bruxelles in 2021 and a BEng in Information Engineering from <a href="https://en.nwpu.edu.cn/">Northwestern Polytechnical University</a> in 2019, and I was a research intern at the <a href="https://lawecon.ethz.ch/">Center for Law &amp; Economics, ETH Zurich</a> in 2021.</p>
+      <h2><i class="fas fa-user"></i>About</h2>
+      <p>I work on trustworthy machine learning for high-stakes decision making, with healthcare as my main application area.</p>
+      <p>I received my PhD in AI for Healthcare from the <a href="https://www.unige.ch/medecine/radio/en/research-groups/1035teodoro">Université de Genève</a> in 2026, in the <a href="https://ds4dh.unige.ch/">Data Science for Digital Health</a> group of Prof. Douglas Teodoro. I am a research affiliate at MIT's <a href="https://lcp.mit.edu/">Laboratory for Computational Physiology</a>, where I was a visiting researcher with Prof. Leo A. Celi in 2025–26.</p>
     </section>
 
     <section id="news">
-      <h2>News</h2>
+      <h2><i class="fas fa-bullhorn"></i>News</h2>
       <ul class="news">
-        <li><span class="date">Oct 2026</span><span>Our survey on <a href="https://doi.org/10.1007/s10462-026-11743-y">retrieval-augmented generation in biomedicine</a> is published in <em>Artificial Intelligence Review</em>.</span></li>
-        <li><span class="date">Oct 2026</span><span>Two papers in the EMNLP 2026 proceedings: <a href="https://aclanthology.org/2026.mrl-1.51/">PAINT</a> at the MRL workshop and <a href="https://aclanthology.org/2026.emnlp-main.2379/">SeMLI-RAG</a> at the main conference.</span></li>
-        <li><span class="date">Sep 2026</span><span>Defended my PhD at the Université de Genève on 2 September.</span></li>
-        <li><span class="date">Sep 2026</span><span><a href="https://doi.org/10.1038/s41746-026-03224-x">Knowledge-enhanced LLMs for multilingual concept normalization</a> published in <em>npj Digital Medicine</em>.</span></li>
-        <li><span class="date">May 2026</span><span>Panelist at <a href="https://criticaldata.mit.edu/events/san-francisco-2026">AI as a Catalyst</a> with Stanford and Threshold Ventures.</span></li>
-        <li><span class="date">Apr 2026</span><span>Hosted the first <a href="https://sites.mit.edu/mit-ai-comedy-night/">MIT AI Comedy Night</a>: humans against AI on humor.</span></li>
-        <li><span class="date">Nov 2025</span><span>Started a research stay at MIT's <a href="https://lcp.mit.edu/">Laboratory for Computational Physiology</a>.</span></li>
+        <li><span class="date">Oct 2026</span><span><span class="emo">📄</span>Our survey on <a href="https://doi.org/10.1007/s10462-026-11743-y">retrieval-augmented generation in biomedicine</a> is published in <em>Artificial Intelligence Review</em>.</span></li>
+        <li><span class="date">Oct 2026</span><span><span class="emo">📄</span>Two papers in the EMNLP 2026 proceedings: <a href="https://aclanthology.org/2026.mrl-1.51/">PAINT</a> at the MRL workshop and <a href="https://aclanthology.org/2026.emnlp-main.2379/">SeMLI-RAG</a> at the main conference.</span></li>
+        <li><span class="date">Sep 2026</span><span><span class="emo">🎓</span>Defended my PhD at the Université de Genève on 2 September.</span></li>
+        <li><span class="date">Sep 2026</span><span><span class="emo">📄</span><a href="https://doi.org/10.1038/s41746-026-03224-x">Knowledge-enhanced LLMs for multilingual concept normalization</a> published in <em>npj Digital Medicine</em>.</span></li>
+        <li><span class="date">May 2026</span><span><span class="emo">🎤</span>Panelist at <a href="https://criticaldata.mit.edu/events/san-francisco-2026">AI as a Catalyst</a> with Stanford and Threshold Ventures.</span></li>
+        <li><span class="date">Apr 2026</span><span><span class="emo">🎭</span>Hosted the first <a href="https://sites.mit.edu/mit-ai-comedy-night/">MIT AI Comedy Night</a>: humans against AI on humor.</span></li>
+        <li><span class="date">Nov 2025</span><span><span class="emo">✈️</span>Started a research stay at MIT's <a href="https://lcp.mit.edu/">Laboratory for Computational Physiology</a>.</span></li>
       </ul>
     </section>
 
     <section id="interests">
-      <h2>Research interests</h2>
+      <h2><i class="fas fa-compass"></i>Research interests</h2>
       <p>Trustworthy machine learning for high-stakes decision making:</p>
       <ul class="interests">
         <li><strong>Transparent human–AI interaction</strong>: reliable evidence-based decision support systems.</li>
@@ -202,7 +204,7 @@
     </section>
 
     <section id="highlights">
-      <h2>Research highlights</h2>
+      <h2><i class="fas fa-star"></i>Research highlights</h2>
       <div class="cards">
         <div class="card">
           <span class="tag">Retrieval</span>
@@ -232,7 +234,7 @@
     </section>
 
     <section id="publications">
-      <h2>Publications</h2>
+      <h2><i class="fas fa-file-lines"></i>Publications</h2>
       <h3>First author</h3>
       <ul class="pubs">
         <li><a class="title" href="https://doi.org/10.1038/s41746-025-02336-0">HealthContradict: evaluating biomedical knowledge conflicts in language models</a><span class="meta">with A. Bornet, R. Yang, N. Liu, D. Teodoro · <span class="venue">npj Digital Medicine</span>, 2026</span></li>
@@ -259,7 +261,7 @@
     </section>
 
     <section id="activities">
-      <h2>Teaching, community &amp; industry</h2>
+      <h2><i class="fas fa-people-group"></i>Teaching, community &amp; industry</h2>
       <ul class="activities">
         <li>Teaching assistant for <a href="https://moodle.unige.ch/course/info.php?id=18866">Applied Machine Learning in Healthcare: ChatGPT and beyond</a>, Université de Genève: lectures, slides, exercises and student projects.</li>
         <li>Industry and public-sector collaboration with TriNetX (formerly Clinerion), RisKlick and public health partners on the <a href="https://www.aramis.admin.ch/Grunddaten/?ProjectID=49720">NLU4EHR</a>, <a href="https://www.aramis.admin.ch/Grunddaten/?ProjectID=50843">CTxAI</a> and <a href="https://www.interreg-francesuisse.eu/les-projets-aides/gesica">GESICA</a> projects.</li>
